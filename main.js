@@ -1,16 +1,37 @@
 
-
-
-
-
 let questions = getQuestionsEasy();
 let questionsMedium = getQuestionsMedium();
 let questionsHard = getQuestionHard();
 let questionsExtreme = getQuestionsExtreme();
 let categories = getCategories();
 let parentCategories = getParentCategories();
-console.log(questionsMedium)
 
+const containerBox = document.querySelector('.buttonContainer');
+const StartBtn = document.getElementById('start');
+const RestartBtn = document.getElementById('restart');
+const NextButton = document.getElementById('next');
+const audioContainer = document.getElementById('audioContainer');
+const pastAnswerDisplay = document.getElementById('pastAnswersDisplay');
+const quizToFiftyButton = document.getElementById('classicQuizButton');
+const containerQuiz = document.getElementById('quizContainer');
+const currentScoreButton = document.getElementById('currentScoreButton');
+const achievContainer = document.getElementsByClassName('highScoreContainer');
+const frontpageText = document.getElementById('welcomeText');
+const numQuestions = questions.length;
+let currentScore;
+let currentQuestion; 
+let currentDifficulty = 0; //This variables keeps track of question difficulty that is sent to user, 0=easy,1=medium,2=hard,4=hardest
+let easyQuestionCounter = 0;
+let mediumQuestionCounter = 0;
+let hardQuestionCounter = 0;
+let extremeQuestionCounter = 0;
+let totalQuestionCounter = 0;
+let totalnumCorrect = 0;
+let tempNumCorrect = 0; //This variables goes up everytime user gets one correct. If it hits 3 the difficulty moves up and value resets
+let tempNumWrong = 0; //This variables goes up everytime user gets one wrong. If it hits 3 the difficulty moves down and value resets
+let increasedDiff = false;//These two variables are true for a question that has increased/decreased difficulty
+let decreasedDiff = false;
+let userIsCorrect = false;
 
 function assignAnswerText(question){ //Randomly assigns text button answers from the category array
 //                                   //The category array already contains random similar text entries but the order is not ramdonized yet
@@ -69,31 +90,7 @@ function addRandomEntriesToCategory(question) { //This function adds random entr
 
 
 
-const containerBox = document.querySelector('.buttonContainer');
-const StartBtn = document.getElementById('start');
-const RestartBtn = document.getElementById('restart');
-const NextButton = document.getElementById('next');
-const audioContainer = document.getElementById('audioContainer');
-const pastAnswerDisplay = document.getElementById('pastAnswersDisplay');
-const quizToFiftyButton = document.getElementById('classicQuizButton');
-const containerQuiz = document.getElementById('quizContainer')
-const currentScoreButton = document.getElementById('currentScoreButton')
-const achievContainer = document.getElementsByClassName('highScoreContainer')
-const numQuestions = questions.length;
-let currentScore;
-let currentQuestion; 
-let currentDifficulty = 0; //This variables keeps track of question difficulty that is sent to user, 0=easy,1=medium,2=hard,4=hardest
-let easyQuestionCounter = 0;
-let mediumQuestionCounter = 0;
-let hardQuestionCounter = 0;
-let extremeQuestionCounter = 0;
-let totalQuestionCounter = 0;
-let totalnumCorrect = 0;
-let tempNumCorrect = 0; //This variables goes up everytime user gets one correct. If it hits 3 the difficulty moves up and value resets
-let tempNumWrong = 0; //This variables goes up everytime user gets one wrong. If it hits 3 the difficulty moves down and value resets
-let increasedDiff = false;//These two variables are true for a question that has increased/decreased difficulty
-let decreasedDiff = false;
-let userIsCorrect = false;
+
 
 beforeGame() //Begins the code by calling the first function
 
@@ -104,6 +101,7 @@ quizToFiftyButton.addEventListener('click', event => {
     quizContainer.classList.remove('hide')
     console.log('run')
     highScoreContainer.classList.remove('hide')
+    frontpageText.classList.add('hide')
 })
 }
 
