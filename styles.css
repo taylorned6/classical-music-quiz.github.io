@@ -135,6 +135,7 @@ body {
     position: relative;
     top: 1px;
     background-color: rgb(58, 154, 209);
+    width: 140px;
 }
 .gameEndText {
     margin: 0 auto;

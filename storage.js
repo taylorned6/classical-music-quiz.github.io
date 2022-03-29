@@ -14,8 +14,6 @@ highScoresList.push({Name: name, Score: score})
 }
 
 
-
-
 function addBlankEntries(arrayOfQuestions) {
 
     for (i = 0; i < arrayOfQuestions.length; i++) {
@@ -32,7 +30,7 @@ function getParentCategories() {
             "Tchaikovsky - Piano Concerto 1 (B Flat Minor)",
             'Moonlight Sonata - Ludwig van Beethoven',
             'Piano Sonata No. 16 - Mozart',
-            'Rondo Alla Turka - Mozart',
+            'Rondo Alla Turca - Mozart',
             'Fur Elise - Beethoven',
             "Funeral March - Chopin",
             "Joy of Man's Desiring - Bach",
@@ -50,8 +48,8 @@ function getParentCategories() {
 
             ],
         orchestra: [
-            'Kleine NachtEinemusik - Mozart',
-            'Symphone No. 6 - Ludwig Van Beethoven',
+            'Eine kleine Nachtmusik - Mozart',
+            'Symphony No. 6 - Ludwig Van Beethoven',
             'Symphony No. 5 - Ludwig van Beethoven',
             'In the Hall of the Mountain King - Grieg',
             'The Barber of Seville - Gioachino Rossini',
@@ -107,6 +105,7 @@ function getParentCategories() {
             'Annen Polka op. 117 - Johann Strauss II',
             'Kaiser Walzer - Johann Strauss II',
             'Tales from the Vienna Woods - Johann Strauss II',
+            "Johann Strauss II - Artist's Life",
             "Adagio for Strings - Samuel Barber",
             "The Thieving Magpie - Gioachino Rossini",
             'The Barber of Seville - Gioachino Rossini',
@@ -150,13 +149,14 @@ function getCategories() {
             'Kaiser Walzer - Johann Strauss II',
             'Tales from the Vienna Woods - Johann Strauss II',
             "Johann Strauss II - Voices of Spring",
+            "Johann Strauss II - Artist's Life"
         ],
             numToAppend: 5,
             appendFrom: 'theatre'
         },
         {
             text: [    //Easy Piano 1
-            'Rondo Alla Turka - Mozart',
+            'Rondo Alla Turca - Mozart',
             'Fur Elise - Beethoven',
             'Moonlight Sonata - Ludwig van Beethoven',
             'Piano Sonata No. 16 - Mozart',
@@ -175,8 +175,8 @@ function getCategories() {
         },
         {
             text: [    //Symphony No.5 and similar 3
-            'Kleine NachtEinemusik - Mozart',
-            'Symphone No. 6 - Ludwig Van Beethoven',
+            'Eine kleine Nachtmusik - Mozart',
+            'Symphony No. 6 - Ludwig Van Beethoven',
             'Symphony No. 5 - Ludwig van Beethoven',
             'In the Hall of the Mountain King - Grieg',
             'The Barber of Seville - Gioachino Rossini',
@@ -311,7 +311,7 @@ function getCategories() {
             'Haendel - Sarabande',
             'Mendelssohn - Symphony No. 4 in A (Italian)',
             'Waltz "Snowstorm - Georgy Sviridov',
-            'Kleine NachtEinemusik - Mozart',
+            'Eine kleine Nachtmusik - Mozart',
             'Johann Christian Bach - Symphony in G-minor'
             
         ], 
@@ -350,7 +350,7 @@ function getQuestionsEasy() {
     let questions = [ //EASY QUESTION BELOW #######################################################
         {
             answers: [
-                { text: "Kleine NachtEinemusik - Mozart", correct: true},
+                { text: "Eine kleine Nachtmusik - Mozart", correct: true},
             ],
             fileName: 'Audio Files2/Eine Kleine Nachtmusik - Mozart (mp3cut.net).mp3',
             playTimeStart: 0,
@@ -359,7 +359,7 @@ function getQuestionsEasy() {
         },
         {
             answers: [
-                { text: "Rondo Alla Turka - Mozart", correct: true},
+                { text: "Rondo Alla Turca - Mozart", correct: true},
             ],
             fileName: 'Audio Files/Rondo-Alla-Turca-Mozart.mp3',
             playTimeStart: 0,
@@ -448,7 +448,7 @@ let questionsMedium = [ //MEDIUM QUESTION BELOW ################################
     },
     {
         answers: [
-            { text: "Symphone No. 6 - Ludwig Van Beethoven", correct: true},
+            { text: "Symphony No. 6 - Ludwig Van Beethoven", correct: true},
         ],
         fileName: 'Audio Files/Beethoven-Symphony-6-Pastoral-1s.mp3',
         playTimeStart: 0,
@@ -960,6 +960,15 @@ function getQuestionHard() {
         numButtons: '9',
         category: 7 //hungarian
     },
+    {
+        answers: [
+            { text: "Johann Strauss II - Artist's Life", correct: true},
+        ],
+        fileName: "Audio Files2/Johann Strauss II - Artist's Life (mp3cut.net).mp3",
+        playTimeStart: 0,
+        numButtons: '9',
+        category: 0 //strauss
+    },
 ]
 addBlankEntries(questionsHard);
 return questionsHard;
@@ -1195,7 +1204,7 @@ function getQuestionsExtreme() {
     },
     {
         answers: [
-            { text: "Kleine NachtEinemusik - Mozart", correct: true},
+            { text: "Eine kleine Nachtmusik - Mozart", correct: true},
         ],
         fileName: "Audio Files2/Mozart - Serenade in G, K (mp3cut.net).mp3",
         playTimeStart: 0,
