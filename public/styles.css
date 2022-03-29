@@ -1,0 +1,194 @@
+h1 {
+    text-align: center;
+}
+body {
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif
+}
+.navigationBar {
+    background-color: rgb(58, 154, 209);
+    height: 135px;
+    border: 1px solid #ccc;
+}
+.homeImage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 132px;
+}
+.homeImage:hover {
+    cursor: pointer;
+}
+.tabButtons {
+    background-color: inherit;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    border-color: black;
+    font-weight: 500;
+    border-radius:12px;
+}
+.tabButtons:hover {
+    font-size: 17px;
+}
+.quizContainer {
+    border-color:rgb(216, 17, 17);
+    background-color: beige;
+}
+.quizNavigationBar {
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: [first] 0.5fr [line2] 1fr [line3] 1fr [col4-start] 0.5fr [end];
+    grid-auto-rows: minmax(10px, 1fr);
+    width: 800px;
+    height: 40px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.audioButton {
+    border-radius: 24px;
+    padding: 2px 8px;
+    color: black;
+    outline: none;
+    height: 40px;
+    background-color: rgb(58, 154, 209);
+    border-style: solid;
+    border-color:black;
+    
+}
+.currentScoreButton {
+    width: 100px;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 24px;
+    background-color: rgb(58, 154, 209);
+    border-style: solid;
+    border-color:black;
+}
+.buttonContainer {
+    background-color: rgb(179, 184, 184);
+    width: 850px;
+    max-width: 80%;
+    align-items: center;
+    text-align: center;
+    height: 280px;
+    gap: 15px;
+    margin: auto;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+}
+.buttonContainerPadding { /*This style is applied to container box only when showing start button*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bottomContainer {
+    display: grid;
+    grid-template-columns: [first] 8fr [line2] 2fr [end]; 
+}
+.pastAnswersDisplay {
+    position: relative;
+    width: 600px;
+    max-width: 80%;
+    align-items: center;
+    text-align: left;
+    height: flex;
+    gap: 10px;
+    margin: auto;
+    top: 80px;
+}
+.pastAnswersDisplayBorder {
+    border-width: 2px;
+    border-style: solid;
+}
+.nextButtonContainer {
+    align-items: center;
+    text-align: center;
+    height: 50px;
+}
+
+.startbtn {
+    background-color: inherit;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+    padding: 14px 32px;
+    transition: 0.3s;
+    font-size: 16px;
+    border-color: black;
+    font-weight: 500;
+    border-radius:12px;
+}
+.btn {
+    border-radius: 12px;
+    padding: 2px 5px;
+    color: black;
+    outline: none;
+    display: inline-block;
+    height: 37px;
+    background-color: rgb(194, 196, 197);
+    border-width: 2px;
+    border-style: solid;
+    border-color:rgb(36, 92, 138);
+}
+.nextButton {
+    position: relative;
+    top: 1px;
+    background-color: rgb(58, 154, 209);
+    width: 140px;
+}
+.gameEndText {
+    margin: 0 auto;
+    background-color: inherit;
+    border: none;
+    font-size: 22px;
+}
+.audioButton:hover{
+    border-color: rgb(238, 13, 13);
+  }
+.startbtn:hover{
+    border-color: rgb(238, 13, 13);
+}
+.btn:hover{
+    border-color: rgb(238, 13, 13);
+  }
+
+.hide {
+    display: none;
+}
+.highScoreContainer {
+    text-align: left;
+    color:rgb(31, 110, 156);
+    font-weight: 20px;
+}
+.achievList {
+    color:rgb(58, 154, 209);
+    font-weight: 20px;
+}
+
+.gridColumns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(15px, 1fr);
+}
+
+.correct{
+    background-color: #4CAF50;
+}
+
+.wrong{
+    background-color: #ad2929;
+}
+.disable {
+    pointer-events: none;
+  }
+  

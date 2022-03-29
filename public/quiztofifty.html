@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Classical Music Quizzes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type = 'text/javascript' defer src = "storage.js"></script>
+    <script type = 'text/javascript' defer src = "classicQuizTo50.js"></script>
+    <script type = 'text/javascript' defer src = "navigator.js"></script>
+
+
+</head>
+
+<body>
+
+<div class = 'navigationBar'>
+    <img class = 'homeImage' src="homeImage.jpg" alt="Home" onclick = "launchHomepage()">
+    <h1>Welcome to the Classical Music Quiz</h1> 
+    <div class = 'tabs'>
+<button id = 'classicQuizButton' class ='tabButtons' onclick = "launchQuizToFifty()">Classic Quiz to 50</button>
+<button id = 'gentlemensCupButtons' class ='tabButtons' onclick = "launchGentlemen()"> Gentlemen's Cup</button>
+<button id = 'pianoQuiz' class ='tabButtons'>Piano Quiz</button>
+    </div>
+</div>
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 id ='welcomeText'>Select a quiz to get started</h1>
+</div>
+
+<div id = 'quizContainer' class = 'hide quizContainer'>
+    <div id = 'quizNavigationBar' class = quizNavigationBar>
+        <div id = 'audioContainer' class = 'audioButtonContainer' ></div>
+        <div class = 'grid-item'></div>
+        <div class = 'grid-item'></div>
+        <button id = 'currentScoreButton' class = 'currentScoreButton hide'>Current Score</button>
+    </div>
+    <div class = 'buttonContainer buttonContainerPadding'>
+            <button id = 'restart' class = "btn hide">Restart</button>
+            <button id = 'start' class = "startbtn">Start Quiz</button>
+        </div>
+</div>
+    <div class = 'nextButtonContainer'>
+    <button id = 'next' class = "btn hide nextButton">Next</button>
+</div>
+<div class = 'bottomContainer'>
+    <div id = 'pastAnswersDisplay' class = 'pastAnswersDisplay'></div>
+    <div id = 'highScoreContainer' class = 'highScoreContainer hide'>
+        <h3>Achievement List</h4>
+        <h4 class = 'achievList'>50 God</h4>
+        <h4 class = 'achievList'>45+ Guru</h4>
+        <h4 class = 'achievList'>40+ Expert</h4>
+        <h4 class = 'achievList'>35+ Intermediate</h4>
+        <h4 class = 'achievList'>30+ Novice</h4>
+        <h4 class = 'achievList'>30- Garbo</h4>
+
+       
+      
+    </div>
+</div>
+</body>
